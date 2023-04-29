@@ -246,11 +246,11 @@ export default function PublishPage({
     let _did = did
     console.log(values)
     console.log(router)
-    values.metadata.name = query.name
+    values.metadata.name = String(query.name)
     values.metadata.author = 'VideoWiki User'
-    values.metadata.description = query.desc
-    values.metadata.tags = query.tags
-    values.services[0].files[0].url = query.url
+    values.metadata.description = String(query.desc)
+    // values.metadata.tags = query.tags
+    values.services[0].files[0].url = String(query.url)
     values.pricing.price = 1
     if (!_erc721Address || !_datatokenAddress) {
       const { erc721Address, datatokenAddress } = await create(values)

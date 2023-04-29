@@ -3,10 +3,11 @@ import React, { ReactElement } from 'react'
 import { FormPublishData } from '../_types'
 import styles from './Feedback.module.css'
 import TransactionCount from './TransactionCount'
+import feedback from '../../../../content/publish/feedback.json'
 
 export function Feedback(): ReactElement {
   const { values } = useFormikContext<FormPublishData>()
-
+console.log("dsad",values)
   const items = Object.entries(values.feedback).map(([key, value], index) => (
     <li key={index} className={styles[value.status]}>
       <h3 className={styles.title}>{value.name}</h3>

@@ -86,12 +86,17 @@ export default function Actions({
 
           {values.user.stepCurrent < wizardSteps.length ? (
             <Button
-              style="primary"
-              onClick={handleNext}
-              disabled={isContinueDisabled}
-            >
-              Continue
-            </Button>
+            type="submit"
+            style="primary"
+          >
+            {isSubmitting ? (
+              <Loader white />
+            ) : hasSubmitError ? (
+              'Retry'
+            ) : (
+              'Submit'
+            )}
+          </Button>
           ) : !accountId ? (
             <Button type="submit" style="primary" onClick={handleActivation}>
               Connect Wallet

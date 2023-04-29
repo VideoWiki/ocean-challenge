@@ -14,6 +14,7 @@ import Preview from './Preview'
 import Submission from './Submission'
 import { ServiceComputeOptions } from '@oceanprotocol/lib'
 import contentFeedback from '../../../content/publish/feedback.json'
+import MetaAsset from '@components/Asset/AssetContent/MetaMain/MetaAsset'
 
 export const wizardSteps: StepContent[] = [
   {
