@@ -34,7 +34,7 @@ export default function PagePublish() {
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-around' }}>
         <iframe
-          src="http://localhost:8080/studio"
+          src="https://dev.stream.video.wiki/studio"
           width="70%"
           height="640"
         ></iframe>
