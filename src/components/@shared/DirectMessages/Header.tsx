@@ -65,63 +65,64 @@ export default function Header() {
   }, [conversationId])
 
   return (
-    <div className={styles.header} onClick={handleClick}>
-      {!conversationId ? (
-        <>
-          <div>
-            <ChatBubble role="img" aria-label="Chat" className={styles.icon} />
-          </div>
-          <span>Direct Messages</span>
-          {totalNotifications > 0 && (
-            <span className={styles.notificationCount}>
-              {totalNotifications}
-            </span>
-          )}
-        </>
-      ) : (
-        <>
-          {openConversations && (
-            <button
-              type="button"
-              aria-label="button"
-              data-role="back-button"
-              className={styles.btnBack}
-            >
-              <ArrowBack
-                role="img"
-                aria-label="arrow"
-                className={styles.backIcon}
-              />
-            </button>
-          )}
-          {activeConversationTitle && (
-            <>
-              <span>{activeConversationTitle}</span>
-              <button
-                type="button"
-                data-role="copy-address"
-                title="Copy Address"
-                className={styles.btnCopy}
-              >
-                <Copy
-                  role="img"
-                  aria-label="Copy Address"
-                  className={styles.copyIcon}
-                />
-              </button>
-            </>
-          )}
-        </>
-      )}
-      <div className={styles.toggleArrow}>
-        <ChevronUp
-          role="img"
-          aria-label="Toggle"
-          className={`${styles.icon} ${
-            openConversations ? styles.isFlipped : ''
-          }`}
-        />
-      </div>
-    </div>
+    <></>
+    // <div className={styles.header} onClick={handleClick}>
+    //   {!conversationId ? (
+    //     <>
+    //       <div>
+    //         <ChatBubble role="img" aria-label="Chat" className={styles.icon} />
+    //       </div>
+    //       <span>Direct Messages</span>
+    //       {totalNotifications > 0 && (
+    //         <span className={styles.notificationCount}>
+    //           {totalNotifications}
+    //         </span>
+    //       )}
+    //     </>
+    //   ) : (
+    //     <>
+    //       {openConversations && (
+    //         <button
+    //           type="button"
+    //           aria-label="button"
+    //           data-role="back-button"
+    //           className={styles.btnBack}
+    //         >
+    //           <ArrowBack
+    //             role="img"
+    //             aria-label="arrow"
+    //             className={styles.backIcon}
+    //           />
+    //         </button>
+    //       )}
+    //       {activeConversationTitle && (
+    //         <>
+    //           <span>{activeConversationTitle}</span>
+    //           <button
+    //             type="button"
+    //             data-role="copy-address"
+    //             title="Copy Address"
+    //             className={styles.btnCopy}
+    //           >
+    //             <Copy
+    //               role="img"
+    //               aria-label="Copy Address"
+    //               className={styles.copyIcon}
+    //             />
+    //           </button>
+    //         </>
+    //       )}
+    //     </>
+    //   )}
+    //   <div className={styles.toggleArrow}>
+    //     <ChevronUp
+    //       role="img"
+    //       aria-label="Toggle"
+    //       className={`${styles.icon} ${
+    //         openConversations ? styles.isFlipped : ''
+    //       }`}
+    //     />
+    //   </div>
+    // </div>
   )
 }

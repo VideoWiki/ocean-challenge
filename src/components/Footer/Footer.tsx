@@ -14,12 +14,9 @@ export default function Footer(): ReactElement {
 
   return (
     <footer className={styles.footer}>
-      <BuildId />
-      <MarketStats />
 
       <div className={styles.grid}>
-        <Links />
-        <div className={styles.copyright}>
+        <div className={styles.copyright} style={{textAlign:'center'}}>
           © {year} <Markdown text={siteContent?.copyright} />
           <Button
             style="text"
