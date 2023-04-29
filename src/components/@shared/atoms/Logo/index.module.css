@@ -1,0 +1,13 @@
+.logo {
+  width: 50px;
+  margin-top: -12px;
+  margin-right: 16px;
+}
+
+.logo path {
+  fill: var(--font-color-heading);
+}
+
+a > .logo:hover path {
+  fill: var(--color-primary);
+}
