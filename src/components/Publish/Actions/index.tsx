@@ -58,7 +58,7 @@ export default function Actions({
   function redirectToAsset(){
     const data = JSON.stringify({
       type: 'url',
-      url: `https://market.video.wiki/asset/asset/${did}`,
+      url: `https://market.video.wiki/asset/${did}`,
     });
     window.parent.postMessage(data, '*');
   }
