@@ -21,7 +21,7 @@ export default function Footer(): ReactElement {
           <Button
             style="text"
             size="small"
-            href="https://video.wiki"
+            href="https://github.com/VideoWiki/ocean-challenge"
             target="_blank"
           >
             VideoWiki <External className={styles.svg} />
