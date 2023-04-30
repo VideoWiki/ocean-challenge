@@ -55,6 +55,14 @@ export default function Actions({
     handleAction('prev')
   }
 
+  function redirectToAsset(){
+    const data = JSON.stringify({
+      type: 'url',
+      url: `https://market.video.wiki/asset/asset/${did}`,
+    });
+    window.parent.postMessage(data, '*');
+  }
+
   const isContinueDisabled =
     (values.user.stepCurrent === 1 && errors.metadata !== undefined) ||
     (values.user.stepCurrent === 2 && errors.services !== undefined) ||
@@ -71,7 +79,7 @@ export default function Actions({
         <SuccessConfetti
           success="Successfully published!"
           action={
-            <Button style="primary" to={`/asset/${did}`}>
+            <Button style="primary" onClick={redirectToAsset}>
               View Asset
             </Button>
           }
