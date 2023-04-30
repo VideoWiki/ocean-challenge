@@ -92,7 +92,7 @@ export default function DirectMessages() {
 
   return (
     <div
-      className={`${styles.wrapper} ${!openConversations && styles.isClosed}`}
+     style={{display: 'hidden'}} className={`${styles.wrapper} ${!openConversations && styles.isClosed}`}
     >
       <div className={styles.floating}>
         <div className={styles.headerWrapper}>

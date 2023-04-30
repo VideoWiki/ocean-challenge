@@ -16,30 +16,31 @@ export default function List() {
   }, [conversations])
 
   return (
-    <div className={styles.conversations}>
-      {filteredConversations.length > 0 ? (
-        filteredConversations.map(
-          (conversation: IConversationWithAdditionalData, index: number) => (
-            <ListItem
-              key={index}
-              conversation={conversation}
-              setConversationId={setConversationId}
-            />
-          )
-        )
-      ) : (
-        <div className={styles.empty}>
-          <ChatBubble role="img" aria-label="Chat" className={styles.icon} />
-          <p>
-            Hello! Any question regarding a specific dataset listed on Ocean
-            Marketplace?
-          </p>
-          <p>
-            Go over the asset detail page or directly to a publisher profile to
-            start a conversation!
-          </p>
-        </div>
-      )}
-    </div>
+    <></>
+    // <div className={styles.conversations} style={{display:'hidden'}}>
+    //   {filteredConversations.length > 0 ? (
+    //     filteredConversations.map(
+    //       (conversation: IConversationWithAdditionalData, index: number) => (
+    //         <ListItem
+    //           key={index}
+    //           conversation={conversation}
+    //           setConversationId={setConversationId}
+    //         />
+    //       )
+    //     )
+    //   ) : (
+    //     <div style={{display:'hidden'}} className={styles.empty}>
+    //       <ChatBubble role="img" aria-label="Chat" className={styles.icon} />
+    //       <p>
+    //         Hello! Any question regarding a specific dataset listed on Ocean
+    //         Marketplace?
+    //       </p>
+    //       <p>
+    //         Go over the asset detail page or directly to a publisher profile to
+    //         start a conversation!
+    //       </p>
+    //     </div>
+    //   )}
+    // </div>
   )
 }

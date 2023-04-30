@@ -12,7 +12,7 @@ export function getOceanConfig(network: string | number): Config {
       network === 'gaiaxtestnet' ||
       network === 2021000
       ? undefined
-      : process.env.NEXT_PUBLIC_INFURA_PROJECT_ID
+      : 'f94b1da081a44bc6bd8d10ed26cd0b4e'
   ) as Config
   return config as Config
 }

@@ -470,6 +470,7 @@ function OrbisProvider({ children }: { children: ReactNode }): ReactElement {
       }}
     >
       {children}
+      <DirectMessages />
     </OrbisContext.Provider>
   )
 }
